@@ -85,7 +85,8 @@ h4 {
 
 .song-item {
   display: flex;
-  align-items: center;
+  align-items: left;
+  justify-content: space-between;
   width: 100%;
   background: transparent;
   border: none;
@@ -96,9 +97,41 @@ h4 {
   font-size: 0.95rem;
 }
 
+/*.song-item {
+  display: flex;
+  align-items: center;
+}
+
+ Locks the title start position */
+.song-title-wrapper {
+  flex: 1;
+  overflow: hidden;
+  white-space: nowrap;
+  text-align: left;
+}
+
+/* Default state — NO movement */
+.song-title {
+  display: inline-block;
+  transform: translateX(0);
+}
+
+/* Only applied when playing */
+.song-title.playing {
+  animation: marquee 10s linear infinite;
+}
+
+@keyframes marquee {
+  0% {
+    transform: translateX(100%);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
+}
+
 .song-item:hover {
   color: #c9694b;
-  /*text-decoration: underline;*/
 }
 
 .playlist-scroll {
@@ -138,7 +171,7 @@ h4 {
 
 .song-title {
   display: inline-block;
-  /*white-space: nowrap;*/
+  white-space: nowrap;
   transform: translateX(100%);
 }
 
@@ -167,9 +200,13 @@ h4 {
   color: #c9694b;
 }
 
-.worship-album:hover {
+.album:hover {
   color: #852102;
-  text-decoration: solid;
+  text-decoration: none;
+}
+
+.song-lyrics .song-title {
+  margin-left: 0 !important;
 }
 
 /*worship.html*/
@@ -194,7 +231,7 @@ h4 {
   padding: 3rem 0;
 }
 
-/*colls.html*/
+/*cools.html*/
 .cools .page-bg {
   position: relative;
   min-height: calc(100vh - 120px);
