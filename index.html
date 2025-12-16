@@ -14,7 +14,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Kalam:wght@300;400;700&family=Londrina+Shadow&family=PT+Mono&family=Playfair+Display:wght@400;700&family=Poppins:wght@400;700&family=Satisfy&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Londrina+Shadow&family=PT+Mono&family=Playfair:ital,opsz,wght@0,5..1200,300..900;1,5..1200,300..900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap"
       rel="stylesheet"
     />
     <link
@@ -23,7 +23,7 @@
       integrity="sha384-lMz22bIBxH5s/Z1kiMIIpLW7AnJS50pWdFt4zZtIe1Pi33v4uG6fa5PiBBEqFcD"
       crossorigin="anonymous"
     />
-    <link rel="stylesheet" href="/src/styles.css" />
+    <link rel="stylesheet" href="/src/style.css" />
     <script
       src="https://kit.fontawesome.com/ddc3ee268a.js"
       crossorigin="anonymous"
@@ -39,14 +39,14 @@
       crossorigin="anonymous"
     ></script>
   </head>
-  <body class="bg-dark">
-    <nav class="navbar navbar-expand-md sticky-top p-3">
+  <body>
+    <nav class="navbar navbar-expand-md p-3">
       <div class="container">
         <a class="navbar-brand" href="/" title="My official name">
           <img
             src="/assets/images/My-logo.png"
             width="60"
-            class="bg-dark rounded"
+            class="logo rounded-circle"
           />
         </a>
         <button
@@ -61,7 +61,7 @@
           <span class="navbar-toggler-icon"></span>
         </button>
         <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
-          <div class="navbar-nav mx-auto p-2">
+          <div class="navbar-nav ml-auto p-2">
             <a
               class="nav-link text-white p-3"
               href="#playlist"
@@ -71,92 +71,424 @@
             </a>
             <a
               class="nav-link p-3 text-white"
-              href="#Albums"
+              href="#albums"
               title="List of Albums"
             >
               Albums
             </a>
             <a
               class="nav-link text-white p-3"
-              href="#About"
+              href="#about"
               title="About this page"
             >
               About
             </a>
-            <a
-              class="nav-link bg-primary text-white rounded p-3"
-              href="https://docs.google.com/forms/d/e/1FAIpQLSdD3goPpoFU3P6F7tsMsbNSrwb4JdxiJDHE2x2rRzvtXRaq6w/viewform"
-              title="Let's work together"
-              target="_blank"
-            >
-              Let's work <img src="/images/laptop.png" width="25" />
+            <a class="nav-link text-white p-3" href="#" id="playMelodyBtn">
+              Play Song
             </a>
+
+            <audio
+              id="melodyAudio"
+              src="/assets/music/Let go, Let God lyrics .mp3"
+              preload="none"
+            ></audio>
           </div>
         </div>
       </div>
     </nav>
-    <!-- HERO SECTION -->
-    <header id="home" class="hero text-center py-5">
-      <div class="container">
-        <h1 class="fw-bold mb-3">My Go-To Soundtrack</h1>
-        <p class="lead mb-4">
-          Songs that inspire my mornings, energize my day, and uplift my spirit.
-        </p>
-        <img
-          src="/images/music-hero.svg"
-          alt="Music hero illustration"
-          class="img-fluid"
-          width="250"
-        />
-      </div>
-    </header>
-
-    <!-- PLAYLIST SECTION -->
-    <section id="playlist" class="container my-5">
-      <h2 class="text-center mb-4">Playlist</h2>
-      <p class="text-center">
-        Morning worship, gospel favorites, and some R&B vibes to set the tone
-        for the day.
-      </p>
-      <div class="row" id="playlist-songs">
-        <!-- Song items will go here -->
-      </div>
-    </section>
-
-    <!-- ALBUMS SECTION -->
-    <section id="albums" class="container my-5">
-      <h2 class="text-center mb-4">Albums</h2>
-      <p class="text-center">
-        Browse albums that contain the songs I play on repeat.
-      </p>
-      <div class="row" id="album-cards">
-        <!-- Album cards go here -->
-      </div>
-    </section>
-
-    <!-- ABOUT SECTION -->
-    <section id="about" class="container my-5">
-      <h2 class="text-center mb-4">About This Project</h2>
-      <p class="text-center">
-        A music-inspired landing page celebrating the songs that shape my
-        everyday moments, built with HTML, CSS, and JavaScript.
-      </p>
-    </section>
-
-    <!-- PLAY MELODY SECTION -->
-    <section id="play-melody" class="container my-5 text-center">
-      <h2 class="mb-4">Play Melody</h2>
-      <p>Click on a song to play it and experience the vibes!</p>
-      <div id="player-controls">
-        <!-- Audio player or buttons will go here -->
-      </div>
-    </section>
-    <footer>
-      <div class="container text-center">
-        <div>
-          Built with ❤️ using HTML, CSS & JavaScript.
-          <em>Celebrating music that moves the soul</em>
+    <main class="video-section">
+      <video autoplay muted loop playsinline>
+        <source src="/assets/bg-video.mp4" type="video/mp4" />
+        Your browser does not support the video tag.
+      </video>
+      <div class="content">
+        <div class="container">
+          <div class="row">
+            <div class="col-md-8">
+              <div class="hero">
+                <h2 class="text-right py-5 mb-3">Sally: Daily Beats & Vibes</h2>
+                <div class="row panel">
+                  <div class="col-md-3">
+                    <img
+                      src="/assets/images/home-pic.jpg"
+                      alt="Music hero illustration"
+                      class="img-fluid rounded mr-5"
+                      width="250"
+                    />
+                  </div>
+                  <div class="col-md-8">
+                    <p class="lead mb-4">
+                      Songs that inspire my mornings, energize my day, and
+                      uplift my spirit.
+                    </p>
+                  </div>
+                </div>
+              </div>
+              <section id="playlist" class="playlist my-5">
+                <h2 class="text-center mb-4">Playlist</h2>
+                <div class="playlist-scroll">
+                  <div class="panel" id="playlist-songs">
+                    <button
+                      class="song-item panel"
+                      data-src="/assets/music/16. Here On Our Knees - Oncemore Six (2).m4a"
+                    >
+                      <div class="song-title-wrapper">
+                        <span class="song-title"> 01. Here on our knees</span>
+                      </div>
+                      <span class="play-icon mr-auto">
+                        <i class="fas fa-play"></i>
+                      </span>
+                    </button>
+                    <button
+                      class="song-item panel"
+                      data-src="/assets/music/Bow Down and Worship.m4a"
+                    >
+                      <div class="song-title-wrapper">
+                        <span class="song-title">
+                          02. Bow down and worship</span
+                        >
+                      </div>
+                      <span class="play-icon mr-auto">
+                        <i class="fas fa-play"></i>
+                      </span>
+                    </button>
+                    <button
+                      class="song-item panel"
+                      data-src="/assets/music/No Foreign God.m4a"
+                    >
+                      <div class="song-title-wrapper">
+                        <span class="song-title"> 03. No foreign god</span>
+                      </div>
+                      <span class="play-icon mr-auto">
+                        <i class="fas fa-play"></i>
+                      </span>
+                    </button>
+                    <button
+                      class="song-item panel"
+                      data-src="/assets/music/ADONAI.mp3"
+                    >
+                      <div class="song-title-wrapper">
+                        <span class="song-title"> 04. Adonai</span>
+                      </div>
+                      <span class="play-icon mr-auto">
+                        <i class="fas fa-play"></i>
+                      </span>
+                    </button>
+                    <button
+                      class="song-item panel"
+                      data-src="/assets/music/ELSHADDAI-ADONAI.mp3"
+                    >
+                      <div class="song-title-wrapper">
+                        <span class="song-title"> 05. El-Shaddai Adonai</span>
+                      </div>
+                      <span class="play-icon mr-auto">
+                        <i class="fas fa-play"></i>
+                      </span>
+                    </button>
+                    <button
+                      class="song-item panel"
+                      data-src="/assets/music/Exalted.m4a"
+                    >
+                      <div class="song-title-wrapper">
+                        <span class="song-title"> 06. Exalted</span>
+                      </div>
+                      <span class="play-icon mr-auto">
+                        <i class="fas fa-play"></i>
+                      </span>
+                    </button>
+                    <button
+                      class="song-item panel"
+                      data-src="/assets/music/11. Holy Are You Lord _ Jesus Image (With Lyrics) (192) - Copy.mp3"
+                    >
+                      <div class="song-title-wrapper">
+                        <span class="song-title"> 07. Holy are You Lord</span>
+                      </div>
+                      <span class="play-icon mr-auto">
+                        <i class="fas fa-play"></i>
+                      </span>
+                    </button>
+                    <button
+                      class="song-item panel"
+                      data-src="/assets/music/12. You Are Holy (Live) - Jesus Image.m4a"
+                    >
+                      <div class="song-title-wrapper">
+                        <span class="song-title"> 08. You are Holy</span>
+                      </div>
+                      <span class="play-icon mr-auto">
+                        <i class="fas fa-play"></i>
+                      </span>
+                    </button>
+                    <button
+                      class="song-item panel"
+                      data-src="/assets/music/13. Alpha And Omega (Live) - Jesus Image.m4a"
+                    >
+                      <div class="song-title-wrapper">
+                        <span class="song-title"> 09. Alpha And Omega</span>
+                      </div>
+                      <span class="play-icon mr-auto">
+                        <i class="fas fa-play"></i>
+                      </span>
+                    </button>
+                    <button
+                      class="song-item panel"
+                      data-src="/assets/music/14. Oh The Glory Of His Presence - Jesus Image.m4a"
+                    >
+                      <div class="song-title-wrapper">
+                        <span class="song-title">
+                          10. Oh The Glory of His Presence</span
+                        >
+                      </div>
+                      <span class="play-icon mr-auto">
+                        <i class="fas fa-play"></i>
+                      </span>
+                    </button>
+                    <button
+                      class="song-item panel"
+                      data-src="/assets/music/15. How Great Thou Art - Jesus Image.m4a"
+                    >
+                      <div class="song-title-wrapper">
+                        <span class="song-title"> 11. How Great Thou Art</span>
+                      </div>
+                      <span class="play-icon mr-auto">
+                        <i class="fas fa-play"></i>
+                      </span>
+                    </button>
+                    <button
+                      class="song-item panel"
+                      data-src="/assets/music/CeCe Winans_ Goodness of God (Live).mp3"
+                    >
+                      <div class="song-title-wrapper">
+                        <span class="song-title"> 12. Goodness of God</span>
+                      </div>
+                      <span class="play-icon mr-auto">
+                        <i class="fas fa-play"></i>
+                      </span>
+                    </button>
+                    <button
+                      class="song-item panel"
+                      data-src="/assets/music/CeCe Winans - Worthy Of It All (Official Audio).mp3"
+                    >
+                      <div class="song-title-wrapper">
+                        <span class="song-title"> 13. Worthy of it All</span>
+                      </div>
+                      <span class="play-icon mr-auto">
+                        <i class="fas fa-play"></i>
+                      </span>
+                    </button>
+                    <button
+                      class="song-item panel"
+                      data-src="/assets/music/CeCe Winans - King of Glory (Official Audio).mp3"
+                    >
+                      <div class="song-title-wrapper">
+                        <span class="song-title"> 14. King of Glory</span>
+                      </div>
+                      <span class="play-icon mr-auto">
+                        <i class="fas fa-play"></i>
+                      </span>
+                    </button>
+                    <button
+                      class="song-item panel"
+                      data-src="/assets/music/Let go, Let God lyrics .mp3"
+                    >
+                      <div class="song-title-wrapper">
+                        <span class="song-title"> 15. Let go, Let God</span>
+                      </div>
+                      <span class="play-icon mr-auto">
+                        <i class="fas fa-play"></i>
+                      </span>
+                    </button>
+                    <button
+                      class="song-item panel"
+                      data-src="/assets/music/Xania Monet – Your Time Is Coming Lyrics.mp3"
+                    >
+                      <div class="song-title-wrapper">
+                        <span class="song-title"> 16. Your Time is Coming</span>
+                      </div>
+                      <span class="play-icon mr-auto">
+                        <i class="fas fa-play"></i>
+                      </span>
+                    </button>
+                    <button
+                      class="song-item panel"
+                      data-src="/assets/music/Xania Monet - The Strong Don't Get A Break (Lyrics).mp3"
+                    >
+                      <div class="song-title-wrapper">
+                        <span class="song-title">
+                          17. The strong don't get a break</span
+                        >
+                      </div>
+                      <span class="play-icon mr-auto">
+                        <i class="fas fa-play"></i>
+                      </span>
+                    </button>
+                    <button
+                      class="song-item panel"
+                      data-src="/assets/music/Hero - Mariah Carey (Lyrics) 🎵.mp3"
+                    >
+                      <div class="song-title-wrapper">
+                        <span class="song-title"> 18. Hero</span>
+                      </div>
+                      <span class="play-icon mr-auto">
+                        <i class="fas fa-play"></i>
+                      </span>
+                    </button>
+                    <button
+                      class="song-item panel"
+                      data-src="/assets/music/Whitney Houston - I Look to You (Lyrics).mp3"
+                    >
+                      <div class="song-title-wrapper">
+                        <span class="song-title"> 19. I look to you</span>
+                      </div>
+                      <span class="play-icon mr-auto">
+                        <i class="fas fa-play"></i>
+                      </span>
+                    </button>
+                    <button
+                      class="song-item panel"
+                      data-src="/assets/music/When You Believe - Whitney Houston & Mariah Carey (Lyrics) 🎵.mp3"
+                      controls
+                    >
+                      <div class="song-title-wrapper">
+                        <span class="song-title"> 20. When you believe</span>
+                      </div>
+                      <span class="play-icon mr-auto">
+                        <i class="fas fa-play"></i>
+                      </span>
+                    </button>
+                    <button
+                      class="song-item panel"
+                      data-src="/assets/music/Whitney Houston - I Have Nothing (Lyrics Video).mp3"
+                    >
+                      <div class="song-title-wrapper">
+                        <span class="song-title"> 21. I have nothing</span>
+                      </div>
+                      <span class="play-icon mr-auto">
+                        <i class="fas fa-play"></i>
+                      </span>
+                    </button>
+                    <button
+                      class="song-item panel"
+                      data-src="/assets/music/Whitney Houston - I Will Always Love You (Official Lyric Video).mp3"
+                    >
+                      <div class="song-title-wrapper">
+                        <span class="song-title">
+                          22. I will always love you</span
+                        >
+                      </div>
+                      <span class="play-icon mr-auto">
+                        <i class="fas fa-play"></i>
+                      </span>
+                    </button>
+                    <button
+                      class="song-item panel"
+                      data-src="/assets/music/Mariah Carey - Love Takes Time (Official HD Video).mp3"
+                    >
+                      <div class="song-title-wrapper">
+                        <span class="song-title"> 23. Love takes time</span>
+                      </div>
+                      <span class="play-icon mr-auto">
+                        <i class="fas fa-play"></i>
+                      </span>
+                    </button>
+                    <button
+                      class="song-item panel"
+                      data-src="/assets/music/Un-Break My Heart - Toni Braxton (Lyrics) 🎵.mp3"
+                    >
+                      <div class="song-title-wrapper">
+                        <span class="song-title"> 24. Unbreak my heart</span>
+                      </div>
+                      <span class="play-icon mr-auto">
+                        <i class="fas fa-play"></i>
+                      </span>
+                    </button>
+                  </div>
+                </div>
+              </section>
+            </div>
+            <div class="col-md-3 song-lyrics panel ml-5" id="lyricsPanel">
+              <h5 class="song-title text-center">Select a song</h5>
+              <p class="song-artist text-muted"></p>
+              <div class="song-description mt-2"></div>
+              <hr />
+              <div class="lyrics-body">
+                <p class="text-muted">Lyrics will appear here...</p>
+              </div>
+              <div class="lyrics-actions">
+                <button class="btn like-btn">👍 Like</button>
+                <button class="btn dislike-btn">👎 Dislike</button>
+              </div>
+            </div>
+          </div>
+          <section id="albums" class="container my-5">
+            <h2 class="text-center mb-4">Albums</h2>
+            <p class="text-center">
+              Browse albums that contain the songs I play on repeat.
+            </p>
+            <div class="row panel" id="album-cards">
+              <div class="col-md-3 panel mr-4 ml-5">
+                <a
+                  href="/assets/worship.html"
+                  target="_blank"
+                  class="worship-album"
+                >
+                  <img
+                    src="/assets/images/album.png"
+                    alt="worship-album"
+                    class="rounded"
+                    width="250"
+                  />
+                  <div class="text-center text-white">
+                    Early morning worship
+                  </div>
+                </a>
+              </div>
+              <div class="col-md-3 panel mr-4">
+                <a
+                  href="/assets/drive.html"
+                  target="_blank"
+                  class="worship-album"
+                >
+                  <img
+                    src="/assets/images/album-1.png"
+                    alt="drive-album"
+                    class="rounded drive-album"
+                    width="250"
+                  />
+                  <div class="text-center text-white">
+                    Ride with me in joy and gratitude
+                  </div>
+                </a>
+              </div>
+              <div class="col-md-3 panel mr-4">
+                <a
+                  href="/assets/cools.html"
+                  target="_blank"
+                  class="cools-album"
+                >
+                  <img
+                    src="/assets/images/album-2.png"
+                    alt="R&B-album"
+                    class="rounded cools-album"
+                    width="250"
+                  />
+                  <div class="text-center text-white">Songs that see 'Me'</div>
+                </a>
+              </div>
+            </div>
+          </section>
         </div>
+        <section id="about" class="container my-5">
+          <h2 class="text-center mb-4">About This Project</h2>
+          <p class="text-center">
+            A music-inspired landing page celebrating the songs that shape my
+            everyday moments. Built with ❤️ using HTML, CSS & JavaScript.
+            <em>Celebrating music that moves the soul</em>
+          </p>
+        </section>
+      </div>
+    </main>
+    <footer>
+      <div class="container text-center p-3">
         <div style="color: var(--muted); font-size: 0.95rem">
           © <strong style="color: var(--accent-2)">Sarah Duker</strong>
         </div>
@@ -174,5 +506,7 @@
         </div>
       </div>
     </footer>
+    <audio id="globalAudio"></audio>
   </body>
+  <script src="/src/main.js"></script>
 </html>
