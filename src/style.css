@@ -194,6 +194,17 @@ h4 {
   padding: 3rem 0;
 }
 
+/*colls.html*/
+.cools .page-bg {
+  position: relative;
+  min-height: calc(100vh - 120px);
+  background-image: url("/assets/images/cools.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  padding: 3rem 0;
+}
+
 .page-bg::before {
   content: "";
   position: absolute;
