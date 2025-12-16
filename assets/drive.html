@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Drive with Me</title>
+    <link rel="icon" type="image/jpeg" href="/assets/images/drive.jpg" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css"
+      integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N"
+      crossorigin="anonymous"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Londrina+Shadow&family=PT+Mono&family=Playfair:ital,opsz,wght@0,5..1200,300..900;1,5..1200,300..900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css"
+      integrity="sha384-lMz22bIBxH5s/Z1kiMIIpLW7AnJS50pWdFt4zZtIe1Pi33v4uG6fa5PiBBEqFcD"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="/src/style.css" />
+    <script
+      src="https://kit.fontawesome.com/ddc3ee268a.js"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js"
+      integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-Fy6S3B9q64WdZWQUiU+q4/2Lc9npb8tCaSX9FK7E8HnRr0Jz8D6OP9dO5Vg3Q9ct"
+      crossorigin="anonymous"
+    ></script>
+  </head>
+  <body class="drive">
+    <nav class="navbar navbar-expand-md p-3">
+      <div class="container">
+        <a class="navbar-brand" href="/" title="My official name">
+          <img
+            src="/assets/images/My-logo.png"
+            width="60"
+            class="logo rounded-circle"
+          />
+        </a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-toggle="collapse"
+          data-target="#navbarNavAltMarkup"
+          aria-controls="navbarNavAltMarkup"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <h1 class="text-center mx-auto">DRIVE WITH ME</h1>
+      </div>
+    </nav>
+    <main class="container">
+      <div class="page-bg">
+        <div class="panel" id="playlist-songs">
+          <button
+            class="song-item panel"
+            data-src="/assets/music/CeCe Winans_ Goodness of God (Live).mp3"
+          >
+            <div class="song-title-wrapper">
+              <span class="song-title"> 01. Goodness of God</span>
+            </div>
+            <span class="play-icon mr-auto">
+              <i class="fas fa-play"></i>
+            </span>
+          </button>
+          <button
+            class="song-item panel"
+            data-src="/assets/music/CeCe Winans - Worthy Of It All (Official Audio).mp3"
+          >
+            <div class="song-title-wrapper">
+              <span class="song-title"> 02. Worthy of it All</span>
+            </div>
+            <span class="play-icon mr-auto">
+              <i class="fas fa-play"></i>
+            </span>
+          </button>
+          <button
+            class="song-item panel"
+            data-src="/assets/music/CeCe Winans - King of Glory (Official Audio).mp3"
+          >
+            <div class="song-title-wrapper">
+              <span class="song-title"> 03. King of Glory</span>
+            </div>
+            <span class="play-icon mr-auto">
+              <i class="fas fa-play"></i>
+            </span>
+          </button>
+          <button class="song-item panel" data-src="/assets/music/ADONAI.mp3">
+            <div class="song-title-wrapper">
+              <span class="song-title"> 04. Adonai</span>
+            </div>
+            <span class="play-icon mr-auto">
+              <i class="fas fa-play"></i>
+            </span>
+          </button>
+          <button
+            class="song-item panel"
+            data-src="/assets/music/ELSHADDAI-ADONAI.mp3"
+          >
+            <div class="song-title-wrapper">
+              <span class="song-title"> 05. El-Shaddai Adonai</span>
+            </div>
+            <span class="play-icon mr-auto">
+              <i class="fas fa-play"></i>
+            </span>
+          </button>
+          <button class="song-item panel" data-src="/assets/music/Exalted.m4a">
+            <div class="song-title-wrapper">
+              <span class="song-title"> 06. Exalted</span>
+            </div>
+            <span class="play-icon mr-auto">
+              <i class="fas fa-play"></i>
+            </span>
+          </button>
+          <button
+            class="song-item panel"
+            data-src="/assets/music/11. Holy Are You Lord _ Jesus Image (With Lyrics) (192) - Copy.mp3"
+          >
+            <div class="song-title-wrapper">
+              <span class="song-title"> 07. Holy are You Lord</span>
+            </div>
+            <span class="play-icon mr-auto">
+              <i class="fas fa-play"></i>
+            </span>
+          </button>
+          <button
+            class="song-item panel"
+            data-src="/assets/music/12. You Are Holy (Live) - Jesus Image.m4a"
+          >
+            <div class="song-title-wrapper">
+              <span class="song-title"> 08. You are Holy</span>
+            </div>
+            <span class="play-icon mr-auto">
+              <i class="fas fa-play"></i>
+            </span>
+          </button>
+          <button
+            class="song-item panel"
+            data-src="/assets/music/13. Alpha And Omega (Live) - Jesus Image.m4a"
+          >
+            <div class="song-title-wrapper">
+              <span class="song-title"> 09. Alpha And Omega</span>
+            </div>
+            <span class="play-icon mr-auto">
+              <i class="fas fa-play"></i>
+            </span>
+          </button>
+          <button
+            class="song-item panel"
+            data-src="/assets/music/14. Oh The Glory Of His Presence - Jesus Image.m4a"
+          >
+            <div class="song-title-wrapper">
+              <span class="song-title"> 10. Oh The Glory of His Presence</span>
+            </div>
+            <span class="play-icon mr-auto">
+              <i class="fas fa-play"></i>
+            </span>
+          </button>
+          <button
+            class="song-item panel"
+            data-src="/assets/music/15. How Great Thou Art - Jesus Image.m4a"
+          >
+            <div class="song-title-wrapper">
+              <span class="song-title"> 11. How Great Thou Art</span>
+            </div>
+            <span class="play-icon mr-auto">
+              <i class="fas fa-play"></i>
+            </span>
+          </button>
+        </div>
+      </div>
+    </main>
+    <footer>
+      <div class="container text-center p-3">
+        <div style="color: var(--muted); font-size: 0.95rem">
+          © <strong style="color: var(--accent-2)">Sarah Duker</strong>
+        </div>
+        <div style="margin-top: 0.8rem">
+          <a
+            href="#top"
+            style="
+              color: var(--accent);
+              text-decoration: none;
+              font-weight: 600;
+              font-size: 0.9rem;
+            "
+            >⬆ Back to Top</a
+          >
+        </div>
+      </div>
+    </footer>
+    <audio id="globalAudio"></audio>
+  </body>
+  <script src="/src/main.js"></script>
+</html>
