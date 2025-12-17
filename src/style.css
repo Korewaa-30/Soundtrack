@@ -84,9 +84,9 @@ h4 {
 }
 
 .song-item {
-  display: flex;
+  /*display: flex;
   align-items: left;
-  justify-content: space-between;
+  justify-content: space-between;*/
   width: 100%;
   background: transparent;
   border: none;
@@ -95,6 +95,7 @@ h4 {
   padding: 0.5rem 0;
   cursor: pointer;
   font-size: 0.95rem;
+  margin-left: 0;
 }
 
 /*.song-item {
@@ -102,7 +103,7 @@ h4 {
   align-items: center;
 }
 
- Locks the title start position */
+ Locks the title start position
 .song-title-wrapper {
   flex: 1;
   overflow: hidden;
@@ -110,13 +111,13 @@ h4 {
   text-align: left;
 }
 
-/* Default state — NO movement */
+/* Default state — NO movement
 .song-title {
   display: inline-block;
   transform: translateX(0);
 }
 
-/* Only applied when playing */
+/* Only applied when playing 
 .song-title.playing {
   animation: marquee 10s linear infinite;
 }
@@ -128,7 +129,7 @@ h4 {
   100% {
     transform: translateX(-100%);
   }
-}
+}*/
 
 .song-item:hover {
   color: #c9694b;
