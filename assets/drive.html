@@ -60,11 +60,23 @@
         >
           <span class="navbar-toggler-icon"></span>
         </button>
-        <h1 class="text-center mx-auto">DRIVE WITH ME</h1>
+        <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+          <div class="navbar-nav ml-auto p-2">
+            <a class="nav-link text-white p-3" href="#" id="playMelodyBtn">
+              One Name
+            </a>
+            <audio
+              id="melodyAudio"
+              src="/assets/music/Naomi Raine - One Name (Jesus) [Official Video].mp3"
+              preload="none"
+            ></audio>
+          </div>
+        </div>
       </div>
     </nav>
     <main class="container">
       <div class="page-bg">
+        <h1 class="text-center mx-auto">DRIVE WITH ME</h1>
         <div class="playlist-scroll">
           <div class="panel" id="playlist-songs">
             <button
@@ -206,7 +218,13 @@
     <footer>
       <div class="container text-center p-3">
         <div style="color: var(--muted); font-size: 0.95rem">
-          © <strong style="color: var(--accent-2)">Sarah Duker</strong>
+          ©
+          <a
+            href="https://github.com/Korewaa-30/Soundtrack"
+            target="_blank"
+            style="color: var(--accent-2)"
+            >Sarah Duker</a
+          >
         </div>
         <div style="margin-top: 0.8rem">
           <a
